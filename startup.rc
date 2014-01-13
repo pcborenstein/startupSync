@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PS1="\t~>"
+PATH=$PATH:~/scripts/:~/bin:./
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+for f in "$@";
+
+do 
+ls | grep $f | grep -q \.c$ 
+if [ $? = 0 ]; then
+	d=$(sed 's/\.c//' <<<$f);
+	gcc -o $d $d\.c;
+	chmod +x $d;
+	$d;
+fi
+done
