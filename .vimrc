@@ -18,9 +18,14 @@ set mouse=c	"disable mouse
 set number	"line numbers
 "indentation
 set autoindent	
-set smartindent
-set cindent
+"set smartindent
+"set cindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
 set nocp	"non compatibility mode with vi
 "remove trailling whispace of these filetypes when saving
 autocmd BufWritePre *.c :%s/\s\+$//e
 autocmd BufWritePre *.cpp :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
